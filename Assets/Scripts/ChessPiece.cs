@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChessPiece : MonoBehaviour
 {
-
    public GameManager.ChessPieces pieceType;
+   public Vector2 position;
 
 }

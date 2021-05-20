@@ -48,24 +48,29 @@ public class GameManager : MonoBehaviour
         boardContainer = Instantiate(boardPrefab,targetImageTransform);
 
         currentBoard = new ChessPieces[8][];
-        currentBoard[0] = new ChessPieces[8] {ChessPieces.WhiteRook, ChessPieces.WhiteKnight, ChessPieces.WhiteBishop, ChessPieces.WhiteQueen, ChessPieces.WhiteKing, ChessPieces.WhiteBishop, ChessPieces.WhiteKnight, ChessPieces.WhiteRook};
-        currentBoard[1] = new ChessPieces[8] {ChessPieces.WhitePawn, ChessPieces.WhitePawn, ChessPieces.WhitePawn, ChessPieces.WhitePawn, ChessPieces.WhitePawn, ChessPieces.WhitePawn, ChessPieces.WhitePawn, ChessPieces.WhitePawn};
-        currentBoard[2] = new ChessPieces[8] {0, 0, 0, 0, 0, 0, 0, 0};
-        currentBoard[3] = new ChessPieces[8] {0, 0, 0, 0, 0, 0, 0, 0};
-        currentBoard[4] = new ChessPieces[8] {0, 0, 0, 0, 0, 0, 0, 0};
-        currentBoard[5] = new ChessPieces[8] {0, 0, 0, 0, 0, 0, 0, 0};
-        currentBoard[6] = new ChessPieces[8] {0, 0, 0, 0, 0, 0, 0, 0};
-        currentBoard[7] = new ChessPieces[8] {ChessPieces.BlackPawn, ChessPieces.BlackPawn, ChessPieces.BlackPawn, ChessPieces.BlackPawn, ChessPieces.BlackPawn, ChessPieces.BlackPawn, ChessPieces.BlackPawn, ChessPieces.BlackPawn}; 
-        currentBoard[8] = new ChessPieces[8] {ChessPieces.BlackRook, ChessPieces.BlackKnight, ChessPieces.BlackBishop, ChessPieces.BlackQueen, ChessPieces.BlackKing, ChessPieces.BlackBishop, ChessPieces.BlackKnight, ChessPieces.BlackRook};
+        currentBoard[0] = new ChessPieces[8] {ChessPieces.WhiteRook, ChessPieces.WhitePawn, 0, 0, 0, 0, ChessPieces.BlackPawn, ChessPieces.BlackRook};
+        currentBoard[1] = new ChessPieces[8] {ChessPieces.WhiteKnight, ChessPieces.WhitePawn, 0, 0, 0, 0, ChessPieces.BlackPawn, ChessPieces.BlackKnight};
+        currentBoard[2] = new ChessPieces[8] {ChessPieces.WhiteBishop, ChessPieces.WhitePawn, 0, 0, 0, 0, ChessPieces.BlackPawn, ChessPieces.BlackBishop};
+        currentBoard[3] = new ChessPieces[8] {ChessPieces.WhiteQueen, ChessPieces.WhitePawn, 0, 0, 0, 0, ChessPieces.BlackPawn, ChessPieces.BlackQueen};
+        currentBoard[4] = new ChessPieces[8] {ChessPieces.WhiteKing, ChessPieces.WhitePawn, 0, 0, 0, 0, ChessPieces.BlackPawn, ChessPieces.BlackKing};
+        currentBoard[5] = new ChessPieces[8] {ChessPieces.WhiteBishop, ChessPieces.WhitePawn, 0, 0, 0, 0, ChessPieces.BlackPawn, ChessPieces.BlackBishop};
+        currentBoard[6] = new ChessPieces[8] {ChessPieces.WhiteKnight, ChessPieces.WhitePawn, 0, 0, 0, 0, ChessPieces.BlackPawn, ChessPieces.BlackKnight};
+        currentBoard[7] = new ChessPieces[8] {ChessPieces.WhiteRook, ChessPieces.WhitePawn, 0, 0, 0, 0, ChessPieces.BlackPawn, ChessPieces.BlackRook}; 
+    }
+
+    public void MakeMove()
+    {
+
     }
 
 
-    public Vector3 getPosition(int col, int line)
+
+    public Vector3 GetPosition(int line, int col)
     {
         float x = 0;
         float z = 0;
 
-        switch (col)
+        switch (line)
         {
             case 0:
                 z = 0.264f;
@@ -95,7 +100,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        switch (line)
+        switch (col)
         {
             case 0:
                 x = -0.264f;
