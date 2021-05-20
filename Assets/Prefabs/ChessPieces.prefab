@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 5
+  position: {x: 1, y: 0}
 --- !u!114 &7562830502610649472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,6 +27,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 2
+  position: {x: 4, y: 0}
 --- !u!114 &5260810389049424135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,6 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 1
+  position: {x: 2, y: 1}
 --- !u!114 &2262283733736140623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,6 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 3
+  position: {x: 3, y: 0}
 --- !u!114 &6215223737352699233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 6
+  position: {x: 0, y: 0}
 --- !u!114 &4188544370944532661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,6 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 1
+  position: {x: 1, y: 1}
 --- !u!114 &7145631157008639701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 1
+  position: {x: 6, y: 1}
 --- !u!114 &3417271197734719820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 7
+  position: {x: 3, y: 6}
 --- !u!1 &3417271197738484237
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 10
+  position: {x: 5, y: 7}
 --- !u!114 &3417271198950301641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 7
+  position: {x: 7, y: 6}
 --- !u!114 &574803521976057564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 9
+  position: {x: 3, y: 7}
 --- !u!114 &3417271198113818951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 7
+  position: {x: 6, y: 6}
 --- !u!114 &6437531924724191365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 10
+  position: {x: 2, y: 7}
 --- !u!114 &3417271198355760421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 7
+  position: {x: 4, y: 6}
 --- !u!114 &6827078361383154406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 8
+  position: {x: 4, y: 7}
 --- !u!114 &3604975314169276175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 11
+  position: {x: 1, y: 7}
 --- !u!114 &4398846126071236800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 11
+  position: {x: 6, y: 7}
 --- !u!114 &3417271199161822617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 7
+  position: {x: 5, y: 6}
 --- !u!114 &3417271199470286181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,6 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 7
+  position: {x: 1, y: 6}
 --- !u!114 &3417271199579600636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 7
+  position: {x: 2, y: 6}
 --- !u!114 &3417271199738200263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 7
+  position: {x: 0, y: 6}
 --- !u!114 &2480101629032059551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 4
+  position: {x: 5, y: 0}
 --- !u!114 &8093216879828591875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,6 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 6
+  position: {x: 7, y: 0}
 --- !u!114 &6716087848426925424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,6 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 1
+  position: {x: 4, y: 1}
 --- !u!114 &1609589363753103220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 4
+  position: {x: 2, y: 0}
 --- !u!114 &6746621777082034173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 1
+  position: {x: 7, y: 1}
 --- !u!114 &6297140629141849680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,6 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 5
+  position: {x: 6, y: 0}
 --- !u!114 &4050345530972598314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,6 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 1
+  position: {x: 0, y: 1}
 --- !u!114 &6296689975784290071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 12
+  position: {x: 0, y: 7}
 --- !u!114 &2354406026663633569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 1
+  position: {x: 5, y: 1}
 --- !u!114 &4211416141934305944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 1
+  position: {x: 3, y: 1}
 --- !u!114 &2507706978376295652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,6 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: 12
+  position: {x: 7, y: 7}
 --- !u!1001 &1334613007362992075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -488,6 +520,10 @@ PrefabInstance:
     - target: {fileID: 107724, guid: 7248632fb471af143947a88a47eae959, type: 3}
       propertyPath: m_Name
       value: White Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 107724, guid: 7248632fb471af143947a88a47eae959, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 107724, guid: 7248632fb471af143947a88a47eae959, type: 3}
       propertyPath: m_TagString
@@ -563,6 +599,10 @@ PrefabInstance:
       value: White King
       objectReference: {fileID: 0}
     - target: {fileID: 119820, guid: 9e4e635002b6a524ca896adb28e8e388, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 119820, guid: 9e4e635002b6a524ca896adb28e8e388, type: 3}
       propertyPath: m_TagString
       value: WhitePiece
       objectReference: {fileID: 0}
@@ -634,6 +674,10 @@ PrefabInstance:
     - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
       propertyPath: m_Name
       value: White Pawn (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
       propertyPath: m_TagString
@@ -709,6 +753,10 @@ PrefabInstance:
       value: White Queen
       objectReference: {fileID: 0}
     - target: {fileID: 103078, guid: 6f38c700bedefe64f8364436528e5c3d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 103078, guid: 6f38c700bedefe64f8364436528e5c3d, type: 3}
       propertyPath: m_TagString
       value: WhitePiece
       objectReference: {fileID: 0}
@@ -780,6 +828,10 @@ PrefabInstance:
     - target: {fileID: 114028, guid: 43ef2ba32fda59c42a1410ea490d494b, type: 3}
       propertyPath: m_Name
       value: White Rook
+      objectReference: {fileID: 0}
+    - target: {fileID: 114028, guid: 43ef2ba32fda59c42a1410ea490d494b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114028, guid: 43ef2ba32fda59c42a1410ea490d494b, type: 3}
       propertyPath: m_TagString
@@ -855,6 +907,10 @@ PrefabInstance:
       value: White Pawn (1)
       objectReference: {fileID: 0}
     - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
       propertyPath: m_TagString
       value: WhitePiece
       objectReference: {fileID: 0}
@@ -928,6 +984,10 @@ PrefabInstance:
       value: White Pawn (6)
       objectReference: {fileID: 0}
     - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
       propertyPath: m_TagString
       value: WhitePiece
       objectReference: {fileID: 0}
@@ -999,6 +1059,10 @@ PrefabInstance:
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_Name
       value: Black Pawn (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_TagString
@@ -1086,6 +1150,10 @@ PrefabInstance:
       value: Black Bishop
       objectReference: {fileID: 0}
     - target: {fileID: 196866, guid: a71fd906a2159e247ab4d632e46947db, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 196866, guid: a71fd906a2159e247ab4d632e46947db, type: 3}
       propertyPath: m_TagString
       value: BlackPiece
       objectReference: {fileID: 0}
@@ -1157,6 +1225,10 @@ PrefabInstance:
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_Name
       value: Black Pawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_TagString
@@ -1244,6 +1316,10 @@ PrefabInstance:
       value: Black Queen
       objectReference: {fileID: 0}
     - target: {fileID: 184594, guid: 1f7a3b3d104b8e44cb39f5356ae1d0bb, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 184594, guid: 1f7a3b3d104b8e44cb39f5356ae1d0bb, type: 3}
       propertyPath: m_TagString
       value: BlackPiece
       objectReference: {fileID: 0}
@@ -1315,6 +1391,10 @@ PrefabInstance:
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_Name
       value: Black Pawn (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_TagString
@@ -1402,6 +1482,10 @@ PrefabInstance:
       value: Black Bishop (1)
       objectReference: {fileID: 0}
     - target: {fileID: 196866, guid: a71fd906a2159e247ab4d632e46947db, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 196866, guid: a71fd906a2159e247ab4d632e46947db, type: 3}
       propertyPath: m_TagString
       value: BlackPiece
       objectReference: {fileID: 0}
@@ -1473,6 +1557,10 @@ PrefabInstance:
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_Name
       value: Black Pawn (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_TagString
@@ -1560,6 +1648,10 @@ PrefabInstance:
       value: Black King
       objectReference: {fileID: 0}
     - target: {fileID: 130826, guid: 861e95a585868b643bf2e4a1d0ae63b7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 130826, guid: 861e95a585868b643bf2e4a1d0ae63b7, type: 3}
       propertyPath: m_TagString
       value: BlackPiece
       objectReference: {fileID: 0}
@@ -1631,6 +1723,10 @@ PrefabInstance:
     - target: {fileID: 196802, guid: b6c7ad354ac474944ba26b2895a59759, type: 3}
       propertyPath: m_Name
       value: Black Knight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 196802, guid: b6c7ad354ac474944ba26b2895a59759, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 196802, guid: b6c7ad354ac474944ba26b2895a59759, type: 3}
       propertyPath: m_TagString
@@ -1706,6 +1802,10 @@ PrefabInstance:
       value: Black Knight
       objectReference: {fileID: 0}
     - target: {fileID: 196802, guid: b6c7ad354ac474944ba26b2895a59759, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 196802, guid: b6c7ad354ac474944ba26b2895a59759, type: 3}
       propertyPath: m_TagString
       value: BlackPiece
       objectReference: {fileID: 0}
@@ -1777,6 +1877,10 @@ PrefabInstance:
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_Name
       value: Black Pawn (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_TagString
@@ -1864,6 +1968,10 @@ PrefabInstance:
       value: Black Pawn (6)
       objectReference: {fileID: 0}
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_TagString
       value: BlackPiece
       objectReference: {fileID: 0}
@@ -1947,6 +2055,10 @@ PrefabInstance:
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_Name
       value: Black Pawn (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_TagString
@@ -2034,6 +2146,10 @@ PrefabInstance:
       value: Black Pawn (7)
       objectReference: {fileID: 0}
     - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
       propertyPath: m_TagString
       value: BlackPiece
       objectReference: {fileID: 0}
@@ -2119,6 +2235,10 @@ PrefabInstance:
       value: White Bishop (1)
       objectReference: {fileID: 0}
     - target: {fileID: 190264, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190264, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
       propertyPath: m_TagString
       value: WhitePiece
       objectReference: {fileID: 0}
@@ -2190,6 +2310,10 @@ PrefabInstance:
     - target: {fileID: 114028, guid: 43ef2ba32fda59c42a1410ea490d494b, type: 3}
       propertyPath: m_Name
       value: White Rook (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114028, guid: 43ef2ba32fda59c42a1410ea490d494b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114028, guid: 43ef2ba32fda59c42a1410ea490d494b, type: 3}
       propertyPath: m_TagString
@@ -2265,6 +2389,10 @@ PrefabInstance:
       value: White Pawn (4)
       objectReference: {fileID: 0}
     - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
       propertyPath: m_TagString
       value: WhitePiece
       objectReference: {fileID: 0}
@@ -2336,6 +2464,10 @@ PrefabInstance:
     - target: {fileID: 190264, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
       propertyPath: m_Name
       value: White Bishop
+      objectReference: {fileID: 0}
+    - target: {fileID: 190264, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 190264, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
       propertyPath: m_TagString
@@ -2411,6 +2543,10 @@ PrefabInstance:
       value: White Pawn (7)
       objectReference: {fileID: 0}
     - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
       propertyPath: m_TagString
       value: WhitePiece
       objectReference: {fileID: 0}
@@ -2482,6 +2618,10 @@ PrefabInstance:
     - target: {fileID: 107724, guid: 7248632fb471af143947a88a47eae959, type: 3}
       propertyPath: m_Name
       value: White Knight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 107724, guid: 7248632fb471af143947a88a47eae959, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 107724, guid: 7248632fb471af143947a88a47eae959, type: 3}
       propertyPath: m_TagString
@@ -2557,6 +2697,10 @@ PrefabInstance:
       value: White Pawn
       objectReference: {fileID: 0}
     - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
       propertyPath: m_TagString
       value: WhitePiece
       objectReference: {fileID: 0}
@@ -2628,6 +2772,10 @@ PrefabInstance:
     - target: {fileID: 125018, guid: 9d3e9c36668dcfe44b524760a4c3a3b5, type: 3}
       propertyPath: m_Name
       value: Black Rook (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125018, guid: 9d3e9c36668dcfe44b524760a4c3a3b5, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 125018, guid: 9d3e9c36668dcfe44b524760a4c3a3b5, type: 3}
       propertyPath: m_TagString
@@ -2703,6 +2851,10 @@ PrefabInstance:
       value: White Pawn (5)
       objectReference: {fileID: 0}
     - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
       propertyPath: m_TagString
       value: WhitePiece
       objectReference: {fileID: 0}
@@ -2776,6 +2928,10 @@ PrefabInstance:
       value: White Pawn (3)
       objectReference: {fileID: 0}
     - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
       propertyPath: m_TagString
       value: WhitePiece
       objectReference: {fileID: 0}
@@ -2847,6 +3003,10 @@ PrefabInstance:
     - target: {fileID: 125018, guid: 9d3e9c36668dcfe44b524760a4c3a3b5, type: 3}
       propertyPath: m_Name
       value: Black Rook
+      objectReference: {fileID: 0}
+    - target: {fileID: 125018, guid: 9d3e9c36668dcfe44b524760a4c3a3b5, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 125018, guid: 9d3e9c36668dcfe44b524760a4c3a3b5, type: 3}
       propertyPath: m_TagString

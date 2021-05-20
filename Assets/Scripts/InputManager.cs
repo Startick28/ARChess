@@ -1,9 +1,18 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    private int layerMask;
+
+    void Start()
+    {
+        layerMask = 1 << 8;
+        layerMask = ~layerMask;
+    }
+
+
     void Update()
     {
 
@@ -23,8 +32,18 @@ public class InputManager : MonoBehaviour
             RaycastHit hit;
             if ( Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit) )
             {
-                // Appeler la fonction du plaisir
+                if (hit.collider.CompareTag("ChessPiece")){
+                    // Appeler la fonction du plaisir
+                }
             }
+
+            if ( Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity, layerMask) )
+            {
+                if (hit.collider.CompareTag("Target")){
+                    // Appeler la fonction du plaisir
+                }
+            }
+
         }
 
     }

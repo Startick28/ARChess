@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: 
-    ufoLicenseKey: QVg1TUV3SC8vLy8vQUFBQUtIUVFTQVhyOWs2TnBuNXc2aENzYXN3dVJsZ1cxRkswRWs4YVh6TG8wUUM0aHhJWEM2cmFUM1dRWHdJWnNnSjFFWDlkYlBKVXdKRlVRenF5YlpiTmI0L05GMTYyQUNNVU54RFhaenYvdzBlcnliNC82clR6S1ZYbitaSlNtTlFqVGNQSXZkZ0RISStVMmlYNUM1OTdtRmZ0Ymw5R2ZFcTE2UytOK2E2OTZsZVlZS2JyMVpvWFI3d1N6VHJNWHI5cUFXb0FYTG1DOEx6aDdzMzZXV25XQUZ6NEROWEYrSEdtRDZRT05aNDUwbmw0MFFqNXU4VHI2aWNySUUzR29nR2dLaGYxVCt4ekJuTUxvY2RFbDMzNUZEVzdrdVNJaTVvd0sweDlnT0RieVB5L0ozakdqcWoyK3djUVdXS3EzbFhxeDBZdFluNGNzSzB3bFdJbEY0eU1KaU9BTWxKZVFHTEZldkhTZjNOejA0Wno=
+    vuforiaLicenseKey: Acp2HKH/////AAABmZcGOGwVyUU7sfnkFEhI/EtyhAhliBIfXCl1hNvoUAhJhGxOGrL9O1uQYHRouTDe1lBeD6xAFlv4me7ZHiMShI/iND5/H18tuOl3CWne/IK2dRQNI97OHx13pmY9BpI+0YAxTAMpVkLOt7Yana+6DpX7Zlb4yiGWSDWg6T+68fopa41lhkwsgWviHek5fylJ8C5hC7+cf1bJYeGVrScIrbyG1kW0x8YS8x8G+yy388vuPAkH6664pdllUA6g5lw28VNy5pwwhOn8Hav1RHs4XCSuAyYHvrZPBfY/kv1EFTzJ86IDXFjhG0vm3VtZcePYmweFeJLIMvj9MeuPTNsk75lPjtAALEoi0s/BXYKARvqQ
+    ufoLicenseKey: QVprWmtVMy8vLy8vQUFBQUtFQWxGdlJiMkVHZHBPcTJpRHMwblQwV2g1bmtZQy9zeE0zY1FPTXRJYmh5Rm0xaUtYdmoyWGhXdnJqZzh3NDJKajRrSGYrQklFR2tTQTJPTUJpdFhIY2V3MzFsUi9Ba1YvajhFL2kwb1pkSk1oOTRrc1ord1BzU1JaZzAwbWk2dkd6bUgyQUxTNDgwQytqelFIQzQ5a2Q2bnhIdldqVHY1SGtSdDA2MDA3UndtUjI0V21nWm0wbDdqTUFVbVBkRHcwK2x2ODdBVWp1VFZWVXpvZVRHcTByYmQ2bHQwMWU3UjVpOHdiWVZqQy9VM2IzZGhFa2Fzdk5GM01zQnFucXBHalp2SFlpQmdhM2dNaGtERUpDM2dETUlmWFZKbWNDSm5wdDkzNVR0VXJVakZNNys4eUZKREY2UmdDVmI5L1lJWlp1aXptNnAycTRaZ3dDa3pNN1dFT3M1bkNRenJ2aEdZeVhYR2paTTAvUTQ=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 1
     maxSimultaneousObjectTargets: 1
     useDelayedLoadingObjectTargets: 0
     modelTargetRecoWhileExtendedTracked: 1
-    version: 1.0.0
+    version: 8.1.12
     eulaAcceptedVersions: '{"Values":["8.1","8.5"]}'
   database:
     disableModelExtraction: 0
@@ -31,8 +31,8 @@ MonoBehaviour:
       type: 3}
     videoBackgroundEnabled: 1
   deviceTracker:
-    autoInitTracker: 0
-    autoStartTracker: 0
+    autoInitTracker: 1
+    autoStartTracker: 1
     arcoreRequirement: 0
     autoImportArcore: 0
   smartTerrain:
