@@ -113,8 +113,10 @@ public class GameManager : MonoBehaviour
 
             // Si on a win
                 finalText.text = playerPlaying == Player.White ? "CheckMate\\Black Won" : "CheckMate\\White Won";
+                finalText.gameObject.SetActive(true);
                 button1.SetActive(true);
                 button2.SetActive(true);
+
 
         // Sinon : 
             StartCoroutine(FadingPopup());
