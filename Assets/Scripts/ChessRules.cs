@@ -818,7 +818,7 @@ public class ChessRules : MonoBehaviour
         {
             for (int j = 0; j < 8; j++)
             {
-                if (mate == 2)
+                if (mate2 == 2)
                 {
                     piece.position = new Vector2(i, j);
                     piece.pieceType = board[i][j];
