@@ -21,7 +21,7 @@ public class ChessRules : MonoBehaviour
     }
     
     
-    public List<Vector2> PossibleMoves(ChessPiece piece)
+    public List<Vector2> PossibleMoves(ChessPiece piece, GameManager.ChessPieces[][] board_alt)
     {
         List<Vector2> l = new List<Vector2>();
         int x = (int) piece.position.x;
@@ -34,7 +34,7 @@ public class ChessRules : MonoBehaviour
                 // Diagonal Left
                 if(x!=0 && y!=7) 
                 {
-                    if (GameManager.instance.currentBoard[x-1][y+1] != 0 && !IsWhite(GameManager.instance.currentBoard[x-1][y+1]))
+                    if (board_alt[x-1][y+1] != 0 && !IsWhite(board_alt[x-1][y+1]))
                     {
                         l.Add(new Vector2(x - 1, y + 1));
                     }
@@ -43,7 +43,7 @@ public class ChessRules : MonoBehaviour
                 // Diagonal Right
                 if (x != 7 && y != 7)
                 {
-                    if (GameManager.instance.currentBoard[x+1][y+1] != 0 && !IsWhite(GameManager.instance.currentBoard[x+1][y+1]))
+                    if (board_alt[x+1][y+1] != 0 && !IsWhite(board_alt[x+1][y+1]))
                     {
                         l.Add(new Vector2(x + 1, y + 1));
                     }
@@ -52,7 +52,7 @@ public class ChessRules : MonoBehaviour
                 // Forward
                 if(y != 7)
                 {
-                    if (GameManager.instance.currentBoard[x][y+1] == 0)
+                    if (board_alt[x][y+1] == 0)
                     {
                         l.Add(new Vector2(x, y + 1));
                     }
@@ -60,7 +60,7 @@ public class ChessRules : MonoBehaviour
                 // Two Steps Forward
                 if(y == 1)
                 {
-                    if (GameManager.instance.currentBoard[x][y+1] == 0 && GameManager.instance.currentBoard[x][y+2] == 0)
+                    if (board_alt[x][y+1] == 0 && board_alt[x][y+2] == 0)
                     {
                         l.Add(new Vector2(x, y + 2));
                     }
@@ -71,7 +71,7 @@ public class ChessRules : MonoBehaviour
                 // Diagonal Left
                 if(x!=0 && y!=0) 
                 {
-                    if (GameManager.instance.currentBoard[x-1][y-1] != 0 && IsWhite(GameManager.instance.currentBoard[x-1][y-1]))
+                    if (board_alt[x-1][y-1] != 0 && IsWhite(board_alt[x-1][y-1]))
                     {
                         l.Add(new Vector2(x - 1, y - 1));
                     }
@@ -80,7 +80,7 @@ public class ChessRules : MonoBehaviour
                 // Diagonal Right
                 if (x != 7 && y != 0)
                 {
-                    if (GameManager.instance.currentBoard[x+1][y-1] != 0 && IsWhite(GameManager.instance.currentBoard[x+1][y-1]))
+                    if (board_alt[x+1][y-1] != 0 && IsWhite(board_alt[x+1][y-1]))
                     {
                         l.Add(new Vector2(x + 1, y - 1));
                     }
@@ -89,7 +89,7 @@ public class ChessRules : MonoBehaviour
                 // Forward
                 if(y != 0)
                 {
-                    if (GameManager.instance.currentBoard[x][y-1] == 0)
+                    if (board_alt[x][y-1] == 0)
                     {
                         l.Add(new Vector2(x, y - 1));
                     }
@@ -97,7 +97,7 @@ public class ChessRules : MonoBehaviour
                 // Two Steps Forward
                 if(y == 6)
                 {
-                    if (GameManager.instance.currentBoard[x][y-1] == 0 && GameManager.instance.currentBoard[x][y-2] == 0)
+                    if (board_alt[x][y-1] == 0 && board_alt[x][y-2] == 0)
                     {
                         l.Add(new Vector2(x, y - 2));
                     }
@@ -116,13 +116,13 @@ public class ChessRules : MonoBehaviour
                     x_t--;
                     y_t++;
                     if (x_t < 0 || y_t >= 8) break;
-                    if (GameManager.instance.currentBoard[x_t][y_t] == 0)
+                    if (board_alt[x_t][y_t] == 0)
                     {
                         l.Add(new Vector2(x_t,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y_t]))
                         {
                             l.Add(new Vector2(x_t, y_t));
                         }
@@ -138,13 +138,13 @@ public class ChessRules : MonoBehaviour
                     x_t++;
                     y_t++;
                     if (x_t >= 8 || y_t >= 8) break;
-                    if (GameManager.instance.currentBoard[x_t][y_t] == 0)
+                    if (board_alt[x_t][y_t] == 0)
                     {
                         l.Add(new Vector2(x_t,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y_t]))
                         {
                             l.Add(new Vector2(x_t, y_t));
                         }
@@ -160,13 +160,13 @@ public class ChessRules : MonoBehaviour
                     x_t--;
                     y_t--;
                     if (x_t < 0 || y_t < 0) break;
-                    if (GameManager.instance.currentBoard[x_t][y_t] == 0)
+                    if (board_alt[x_t][y_t] == 0)
                     {
                         l.Add(new Vector2(x_t,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y_t]))
                         {
                             l.Add(new Vector2(x_t, y_t));
                         }
@@ -182,13 +182,13 @@ public class ChessRules : MonoBehaviour
                     x_t++;
                     y_t--;
                     if (x_t >= 8 || y_t < 0) break;
-                    if (GameManager.instance.currentBoard[x_t][y_t] == 0)
+                    if (board_alt[x_t][y_t] == 0)
                     {
                         l.Add(new Vector2(x_t,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y_t]))
                         {
                             l.Add(new Vector2(x_t, y_t));
                         }
@@ -228,13 +228,13 @@ public class ChessRules : MonoBehaviour
                 {
                     if ((int) l_t[i].x >= 0 && (int) l_t[i].x < 8 && (int) l_t[i].y >= 0 && (int) l_t[i].y < 8)
                     {
-                        if (GameManager.instance.currentBoard[(int) l_t[i].x][(int)l_t[i].y] == 0)
+                        if (board_alt[(int) l_t[i].x][(int)l_t[i].y] == 0)
                         {
                             l.Add(new Vector2((int) l_t[i].x, (int)l_t[i].y));
                         }
                         else
                         {
-                            if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[(int) l_t[i].x][(int) l_t[i].y]))
+                            if (IsWhite(piece.pieceType) != IsWhite(board_alt[(int) l_t[i].x][(int) l_t[i].y]))
                             {
                                 l.Add(new Vector2((int) l_t[i].x, (int) l_t[i].y));
                             }
@@ -253,13 +253,13 @@ public class ChessRules : MonoBehaviour
                 {
                     x_t--;
                     if (x_t < 0) break;
-                    if (GameManager.instance.currentBoard[x_t][y_t] == 0)
+                    if (board_alt[x_t][y_t] == 0)
                     {
                         l.Add(new Vector2(x_t, y));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y]))
                         {
                             l.Add(new Vector2(x_t, y));
                         }
@@ -273,13 +273,13 @@ public class ChessRules : MonoBehaviour
                 {
                     x_t++;
                     if (x_t >= 8) break;
-                    if (GameManager.instance.currentBoard[x_t][y] == 0)
+                    if (board_alt[x_t][y] == 0)
                     {
                         l.Add(new Vector2(x_t,y));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y]))
                         {
                             l.Add(new Vector2(x_t, y));
                         }
@@ -292,13 +292,13 @@ public class ChessRules : MonoBehaviour
                 {
                     y_t--;
                     if (y_t < 0) break;
-                    if (GameManager.instance.currentBoard[x][y_t] == 0)
+                    if (board_alt[x][y_t] == 0)
                     {
                         l.Add(new Vector2(x,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x][y_t]))
                         {
                             l.Add(new Vector2(x, y_t));
                         }
@@ -312,13 +312,13 @@ public class ChessRules : MonoBehaviour
                 {
                     y_t++;
                     if (y_t >= 8) break;
-                    if (GameManager.instance.currentBoard[x][y_t] == 0)
+                    if (board_alt[x][y_t] == 0)
                     {
                         l.Add(new Vector2(x,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x][y_t]))
                         {
                             l.Add(new Vector2(x, y_t));
                         }
@@ -341,13 +341,13 @@ public class ChessRules : MonoBehaviour
                     x_t--;
                     y_t++;
                     if (x_t < 0 || y_t >= 8) break;
-                    if (GameManager.instance.currentBoard[x_t][y_t] == 0)
+                    if (board_alt[x_t][y_t] == 0)
                     {
                         l.Add(new Vector2(x_t,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y_t]))
                         {
                             l.Add(new Vector2(x_t, y_t));
                         }
@@ -363,13 +363,13 @@ public class ChessRules : MonoBehaviour
                     x_t++;
                     y_t++;
                     if (x_t >= 8 || y_t >= 8) break;
-                    if (GameManager.instance.currentBoard[x_t][y_t] == 0)
+                    if (board_alt[x_t][y_t] == 0)
                     {
                         l.Add(new Vector2(x_t,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y_t]))
                         {
                             l.Add(new Vector2(x_t, y_t));
                         }
@@ -385,13 +385,13 @@ public class ChessRules : MonoBehaviour
                     x_t--;
                     y_t--;
                     if (x_t < 0 || y_t < 0) break;
-                    if (GameManager.instance.currentBoard[x_t][y_t] == 0)
+                    if (board_alt[x_t][y_t] == 0)
                     {
                         l.Add(new Vector2(x_t,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y_t]))
                         {
                             l.Add(new Vector2(x_t, y_t));
                         }
@@ -407,13 +407,13 @@ public class ChessRules : MonoBehaviour
                     x_t++;
                     y_t--;
                     if (x_t >= 8 || y_t < 0) break;
-                    if (GameManager.instance.currentBoard[x_t][y_t] == 0)
+                    if (board_alt[x_t][y_t] == 0)
                     {
                         l.Add(new Vector2(x_t,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y_t]))
                         {
                             l.Add(new Vector2(x_t, y_t));
                         }
@@ -427,13 +427,13 @@ public class ChessRules : MonoBehaviour
                 {
                     x_t--;
                     if (x_t < 0) break;
-                    if (GameManager.instance.currentBoard[x_t][y_t] == 0)
+                    if (board_alt[x_t][y_t] == 0)
                     {
                         l.Add(new Vector2(x_t, y));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y]))
                         {
                             l.Add(new Vector2(x_t, y));
                         }
@@ -447,13 +447,13 @@ public class ChessRules : MonoBehaviour
                 {
                     x_t++;
                     if (x_t >= 8) break;
-                    if (GameManager.instance.currentBoard[x_t][y] == 0)
+                    if (board_alt[x_t][y] == 0)
                     {
                         l.Add(new Vector2(x_t,y));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x_t][y]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x_t][y]))
                         {
                             l.Add(new Vector2(x_t, y));
                         }
@@ -466,13 +466,13 @@ public class ChessRules : MonoBehaviour
                 {
                     y_t--;
                     if (y_t < 0) break;
-                    if (GameManager.instance.currentBoard[x][y_t] == 0)
+                    if (board_alt[x][y_t] == 0)
                     {
                         l.Add(new Vector2(x,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x][y_t]))
                         {
                             l.Add(new Vector2(x, y_t));
                         }
@@ -486,13 +486,13 @@ public class ChessRules : MonoBehaviour
                 {
                     y_t++;
                     if (y_t >= 8) break;
-                    if (GameManager.instance.currentBoard[x][y_t] == 0)
+                    if (board_alt[x][y_t] == 0)
                     {
                         l.Add(new Vector2(x,y_t));
                     }
                     else
                     {
-                        if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[x][y_t]))
+                        if (IsWhite(piece.pieceType) != IsWhite(board_alt[x][y_t]))
                         {
                             l.Add(new Vector2(x, y_t));
                         }
@@ -536,13 +536,13 @@ public class ChessRules : MonoBehaviour
                 {
                     if ((int) l_t[i].x >= 0 && (int) l_t[i].x < 8 && (int) l_t[i].y >= 0 && (int) l_t[i].y < 8)
                     {
-                        if (GameManager.instance.currentBoard[(int) l_t[i].x][(int)l_t[i].y] == 0)
+                        if (board_alt[(int) l_t[i].x][(int)l_t[i].y] == 0)
                         {
                             l.Add(new Vector2((int) l_t[i].x, (int)l_t[i].y));
                         }
                         else
                         {
-                            if (IsWhite(piece.pieceType) != IsWhite(GameManager.instance.currentBoard[(int) l_t[i].x][(int) l_t[i].y]))
+                            if (IsWhite(piece.pieceType) != IsWhite(board_alt[(int) l_t[i].x][(int) l_t[i].y]))
                             {
                                 l.Add(new Vector2((int) l_t[i].x, (int) l_t[i].y));
                             }
@@ -558,7 +558,7 @@ public class ChessRules : MonoBehaviour
                     board_t[k] = new GameManager.ChessPieces[8];
                     for (int n = 0; n < 8; n++)
                     {
-                        board_t[k][n] = GameManager.instance.currentBoard[k][n];
+                        board_t[k][n] = board_alt[k][n];
                     }
                 }
 
@@ -678,7 +678,7 @@ public class ChessRules : MonoBehaviour
                     // On exclut le cas du roi noir pouvoir faire appel à PossibleMoves (qui fait appel à IsCheck dans le cas des rois)
                     if (piece.pieceType != GameManager.ChessPieces.BlackKing)
                     { 
-                        l = PossibleMoves(piece); 
+                        l = PossibleMoves(piece,board); 
                         for (int k = 0; k < l.Count; k++) 
                         {
                             if (board[(int) l[k].x][(int) l[k].y] == GameManager.ChessPieces.WhiteKing)
@@ -785,7 +785,7 @@ public class ChessRules : MonoBehaviour
 
                     if (IsWhite(piece.pieceType))
                     {
-                        l = PossibleMoves(piece);
+                        l = PossibleMoves(piece,board);
                         for (int k = 0; k < l.Count; k++)
                         {
                             board_t[(int) l[k].x][(int) l[k].y] = piece.pieceType;
@@ -825,7 +825,7 @@ public class ChessRules : MonoBehaviour
 
                     if (!IsWhite(piece.pieceType))
                     {
-                        l = PossibleMoves(piece);
+                        l = PossibleMoves(piece,board);
                         for (int k = 0; k < l.Count; k++)
                         {
                             board_t[(int) l[k].x][(int) l[k].y] = piece.pieceType;
