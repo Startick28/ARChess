@@ -7,13 +7,13 @@ public class TargetFactory : MonoBehaviour
     
     public static TargetFactory instance;
 
-	[SerializeField] private GameObject originalTargetPiece;
-    [SerializeField] private GameObject originalTargetVoid;
+	[SerializeField] private Target originalTargetPiece;
+    [SerializeField] private Target originalTargetVoid;
 
-	private static List<GameObject> allTargetsPiece = new List<GameObject>();
-    private static List<GameObject> allTargetsVoid = new List<GameObject>();
-    private static Queue<GameObject> deadTargetsPiece = new Queue<GameObject>();
-    private static Queue<GameObject> deadTargetsVoid = new Queue<GameObject>();
+	private static List<Target> allTargetsPiece = new List<Target>();
+    private static List<Target> allTargetsVoid = new List<Target>();
+    private static Queue<Target> deadTargetsPiece = new Queue<Target>();
+    private static Queue<Target> deadTargetsVoid = new Queue<Target>();
 	
 	void Awake(){
 
@@ -29,7 +29,7 @@ public class TargetFactory : MonoBehaviour
 
 	public void SetTargets(Vector2[] positions){
 
-		GameObject target;
+		Target target;
 
         foreach (Vector2 pos in positions)
         {
@@ -58,19 +58,20 @@ public class TargetFactory : MonoBehaviour
             }
             Vector3 newpos = GameManager.instance.GetPosition((int) pos.x, (int) pos.y);
             target.transform.position = new Vector3(newpos.x,0.012f,newpos.y);
+            target.position = pos;
         }
 	}
 
 	public static void ClearTargets() {
 
-        foreach (GameObject target in allTargetsPiece)
+        foreach (Target target in allTargetsPiece)
         {
-            target.SetActive(false);
+            target.gameObject.SetActive(false);
             deadTargetsPiece.Enqueue(target);
         }
-        foreach (GameObject target in allTargetsVoid)
+        foreach (Target target in allTargetsVoid)
         {
-            target.SetActive(false);
+            target.gameObject.SetActive(false);
             deadTargetsVoid.Enqueue(target);
         }
 
