@@ -808,7 +808,8 @@ public class ChessRules : MonoBehaviour
                 }
                 else
                 {
-                    break;
+                    
+                    return mate;
                 }
             }
         }
