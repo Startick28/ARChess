@@ -762,7 +762,104 @@ public class ChessRules : MonoBehaviour
     }
 
 
+    public int IsMate(GameManager.ChessPieces[][] board)
+    {
+        int mate;
+        GameManager.ChessPieces[][] board_t = new GameManager.ChessPieces[8][];
+        for (int k = 0; k < 8; k++)
+        {
+            board_t[k] = new GameManager.ChessPieces[8];
+            for (int n = 0; n < 8; n++)
+            {
+                board_t[k][n] = GameManager.instance.currentBoard[k][n];
+            }
+        }
 
+        List<Vector2> l = new List<Vector2>();
+        ChessPiece piece = new ChessPiece(board[0][0], new Vector2(0, 0));
+
+        // White mated
+        mate = 1;
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                if (mate == 1)
+                {
+                    piece.position = new Vector2(i, j);
+                    piece.pieceType = board[i][j];
+
+                    if (IsWhite(piece.pieceType))
+                    {
+                        l = PossibleMoves(piece);
+                        for (int k = 0; k < l.Count; k++)
+                        {
+                            board_t[(int) l[k].x][(int) l[k].y] = piece.pieceType;
+                            board_t[i][j] = GameManager.ChessPieces.Void;
+
+                            if (IsCheck(board_t) == 1)
+                            {
+                                mate = 1;
+                            }
+                            else
+                            {
+                                mate = 0;
+                            }
+
+                            board_t[(int) l[k].x][(int) l[k].y] = board[(int) l[k].x][(int) l[k].y];
+                            board_t[i][j] = piece.pieceType;
+                        }
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+
+        // Black mated
+        mate = 2;
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                if (mate == 2)
+                {
+                    piece.position = new Vector2(i, j);
+                    piece.pieceType = board[i][j];
+
+                    if (!IsWhite(piece.pieceType))
+                    {
+                        l = PossibleMoves(piece);
+                        for (int k = 0; k < l.Count; k++)
+                        {
+                            board_t[(int) l[k].x][(int) l[k].y] = piece.pieceType;
+                            board_t[i][j] = GameManager.ChessPieces.Void;
+
+                            if (IsCheck(board_t) == 2)
+                            {
+                                mate = 2;
+                            }
+                            else
+                            {
+                                mate = 0;
+                            }
+
+                            board_t[(int) l[k].x][(int) l[k].y] = board[(int) l[k].x][(int) l[k].y];
+                            board_t[i][j] = piece.pieceType;
+                        }
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+
+        return mate;
+    }
 
 
     // Start is called before the first frame update
