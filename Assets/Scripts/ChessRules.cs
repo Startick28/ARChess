@@ -716,6 +716,7 @@ public class ChessRules : MonoBehaviour
                     {
                         if (piece.pieceType != GameManager.ChessPieces.WhiteKing) 
                         { 
+                            l = PossibleMoves(piece,board);
                             for (int k = 0; k < l.Count; k++)
                             {
                                 if (board[(int) l[k].x][(int) l[k].y] == GameManager.ChessPieces.BlackKing)
