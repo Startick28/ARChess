@@ -575,14 +575,14 @@ public class ChessRules : MonoBehaviour
                             for (int k = 0; k < 3; k++)
                             {
                                 board_t[k][0] = GameManager.ChessPieces.WhiteKing;
-                                if (IsCheck(board_t))
+                                if (IsCheck(board_t) > 0)
                                 {
                                     castle_possible = false;
                                 }
                             }
                         }
 
-                        if (castle_possible = true)
+                        if (castle_possible)
                         {
                             l.Add(new Vector2(2,0));
                         }
@@ -597,14 +597,14 @@ public class ChessRules : MonoBehaviour
                             for (int k = 5; k < 7; k++)
                             {
                                 board_t[k][0] = GameManager.ChessPieces.WhiteKing;
-                                if (IsCheck(board_t))
+                                if (IsCheck(board_t) > 0)
                                 {
                                     castle_possible = false;
                                 }
                             }
                         }
 
-                        if (castle_possible = true)
+                        if (castle_possible)
                         {
                             l.Add(new Vector2(6,0));
                         }
@@ -624,14 +624,14 @@ public class ChessRules : MonoBehaviour
                             for (int k = 0; k < 3; k++)
                             {
                                 board_t[k][7] = GameManager.ChessPieces.BlackKing;
-                                if (IsCheck(board_t))
+                                if (IsCheck(board_t) > 0)
                                 {
                                     castle_possible = false;
                                 }
                             }
                         }
 
-                        if (castle_possible = true)
+                        if (castle_possible)
                         {
                             l.Add(new Vector2(2,7));
                         }
@@ -646,14 +646,14 @@ public class ChessRules : MonoBehaviour
                             for (int k = 5; k < 7; k++)
                             {
                                 board_t[k][7] = GameManager.ChessPieces.BlackKing;
-                                if (IsCheck(board_t))
+                                if (IsCheck(board_t) > 0)
                                 {
                                     castle_possible = false;
                                 }
                             }
                         }
 
-                        if (castle_possible = true)
+                        if (castle_possible)
                         {
                             l.Add(new Vector2(6,7));
                         }
@@ -667,7 +667,7 @@ public class ChessRules : MonoBehaviour
         return l;
     }
 
-    public bool IsCheck(GameManager.ChessPieces[][] board)
+    public int IsCheck(GameManager.ChessPieces[][] board)
     {
         List<Vector2> l = new List<Vector2>();
         ChessPiece piece = new ChessPiece(board[0][0], new Vector2(0, 0));
@@ -689,7 +689,7 @@ public class ChessRules : MonoBehaviour
                         {
                             if (board[(int) l[k].x][(int) l[k].y] == GameManager.ChessPieces.WhiteKing)
                             {
-                                return true;
+                                return 1;
                             }
                         }
                     }
@@ -707,11 +707,11 @@ public class ChessRules : MonoBehaviour
                         l_t.Add(new Vector2(i-1,j));
                 
 
-                        for (int m = 0; m < 8; m++)
+                        for (int m = 0; m < l.Count; m++)
                         {
                             if (board[(int) l[m].x][(int) l[m].y] == GameManager.ChessPieces.WhiteKing)
                             {
-                                return true;
+                                return 3;
                             }
                         }
                     }
@@ -726,7 +726,7 @@ public class ChessRules : MonoBehaviour
                             {
                                 if (board[(int) l[k].x][(int) l[k].y] == GameManager.ChessPieces.BlackKing)
                                 {
-                                    return true;
+                                    return 2;
                                 }
                             }
                         }
@@ -744,11 +744,11 @@ public class ChessRules : MonoBehaviour
                             l_t.Add(new Vector2(i-1,j));
                 
 
-                            for (int m = 0; m < 8; m++)
+                            for (int m = 0; m < l.Count; m++)
                             {
                                 if (board[(int) l[m].x][(int) l[m].y] == GameManager.ChessPieces.BlackKing)
                                 {
-                                    return true;
+                                    return 3;
                                 }
                             }
                         }
@@ -758,7 +758,7 @@ public class ChessRules : MonoBehaviour
             }
         }
 
-        return false; 
+        return 0; 
     }
 
 
