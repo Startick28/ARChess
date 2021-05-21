@@ -25,6 +25,7 @@ public class TargetFactory : MonoBehaviour
 		else {
             Destroy(this);
         }
+        ClearTargets();
     }
 
 	public void SetTargets(Vector2[] positions){
@@ -41,6 +42,7 @@ public class TargetFactory : MonoBehaviour
                 else {
                     target = Instantiate(originalTargetVoid);
                     target.transform.SetParent(this.gameObject.transform);
+                    target.transform.localScale = new Vector3(0.2f,0.2f,0.2f);
                 }
                 allTargetsVoid.Add(target);
             }
@@ -53,11 +55,13 @@ public class TargetFactory : MonoBehaviour
                 else {
                     target = Instantiate(originalTargetPiece);
                     target.transform.SetParent(this.gameObject.transform);
+                    target.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
                 }
                 allTargetsPiece.Add(target);
             }
             Vector3 newpos = GameManager.instance.GetPosition((int) pos.x, (int) pos.y);
-            target.transform.position = new Vector3(newpos.x,0.012f,newpos.y);
+            target.transform.localPosition = new Vector3(newpos.x,0.012f,newpos.z);
+            target.transform.localRotation = Quaternion.Euler(90f,0f,0f);
             target.position = pos;
         }
 	}

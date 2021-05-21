@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
 
     public ChessPieces[][] currentBoard;
     public ChessPiece currentSelectedPiece;
+
+    public ChessRules rules;
+
     
 
     public void Awake()
@@ -104,22 +107,42 @@ public class GameManager : MonoBehaviour
     public void MakeMove(Vector2 pos)
     {
         // Si le move est autorisé :
+        GameManager.ChessPieces[][] board_t = new GameManager.ChessPieces[8][];
+        for (int k = 0; k < 8; k++)
+        {
+            board_t[k] = new GameManager.ChessPieces[8];
+            for (int n = 0; n < 8; n++)
+            {
+                board_t[k][n] = currentBoard[k][n];
+            }
+        }
+        board_t[(int) currentSelectedPiece.position.x][(int) currentSelectedPiece.position.y] = 0;
+        board_t[(int) pos.x][(int) pos.y] = currentSelectedPiece.pieceType;
+
+        if ( (playerPlaying == Player.White && rules.IsCheck(board_t) != 1 || playerPlaying == Player.Black && rules.IsCheck(board_t) != 2) && rules.IsCheck(board_t) !=3 )
+        {
             currentBoard[(int) currentSelectedPiece.position.x][(int) currentSelectedPiece.position.y] = 0;
             currentSelectedPiece.position = pos;
             currentBoard[(int) pos.x][(int) pos.y] = currentSelectedPiece.pieceType;
+            
+            Vector3 tmp = GetPosition((int) pos.x, (int) pos.y);
+
+            currentSelectedPiece.gameObject.transform.localPosition = new Vector3(tmp.x, currentSelectedPiece.gameObject.transform.localPosition.y, tmp.z);
 
             playerPlaying = 1-playerPlaying;
             playerText.text = playerPlaying == Player.White ? "White to play" : "Black to play";
 
             // Si on a win
-                finalText.text = playerPlaying == Player.White ? "CheckMate\\Black Won" : "CheckMate\\White Won";
-                finalText.gameObject.SetActive(true);
-                button1.SetActive(true);
-                button2.SetActive(true);
+            //    finalText.text = playerPlaying == Player.White ? "CheckMate\\Black Won" : "CheckMate\\White Won";
+            //    finalText.gameObject.SetActive(true);
+            //    button1.SetActive(true);
+            //    button2.SetActive(true);
+        }
 
-
-        // Sinon : 
+        else {
             StartCoroutine(FadingPopup());
+        }
+            
 
 
     }

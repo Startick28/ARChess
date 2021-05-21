@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    public ChessRules rules;
+
     private int layerMask;
 
     void Start()
@@ -35,15 +37,17 @@ public class InputManager : MonoBehaviour
 
                 if (GameManager.instance.playerPlaying == GameManager.Player.White){
                     if (hit.collider.CompareTag("WhitePiece")){
-                        // Appeler la fonction du plaisir : targetPositions = fonction(hit.transform.gameObject.GetComponent<ChessPiece>().position)
-                        targetPositions = new Vector2[1];
+                        // Appeler la fonction du plaisir : 
+                        targetPositions = rules.PossibleMoves(hit.transform.gameObject.GetComponent<ChessPiece>()).ToArray();
                         TargetFactory.instance.SetTargets(targetPositions);
+                        GameManager.instance.currentSelectedPiece = hit.transform.gameObject.GetComponent<ChessPiece>();
                     }
                 }
                 else if (hit.collider.CompareTag("BlackPiece")){
-                    // Appeler la fonction du plaisir : targetPositions = fonction(hit.transform.gameObject.GetComponent<ChessPiece>().position)
-                    targetPositions = new Vector2[1];
+                    // Appeler la fonction du plaisir : 
+                    targetPositions = rules.PossibleMoves(hit.transform.gameObject.GetComponent<ChessPiece>()).ToArray();
                     TargetFactory.instance.SetTargets(targetPositions);
+                    GameManager.instance.currentSelectedPiece = hit.transform.gameObject.GetComponent<ChessPiece>();
                 }
                 
             }
@@ -65,19 +69,22 @@ public class InputManager : MonoBehaviour
 
             if ( Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit) )
             {
+
                 Vector2[] targetPositions;
 
                 if (GameManager.instance.playerPlaying == GameManager.Player.White){
                     if (hit.collider.CompareTag("WhitePiece")){
-                        // Appeler la fonction du plaisir : targetPositions = fonction(hit.transform.gameObject.GetComponent<ChessPiece>().position)
-                        targetPositions = new Vector2[1];
+                        // Appeler la fonction du plaisir :
+                        targetPositions = rules.PossibleMoves(hit.transform.gameObject.GetComponent<ChessPiece>()).ToArray();
                         TargetFactory.instance.SetTargets(targetPositions);
+                        GameManager.instance.currentSelectedPiece = hit.transform.gameObject.GetComponent<ChessPiece>();
                     }
                 }
                 else if (hit.collider.CompareTag("BlackPiece")){
-                    // Appeler la fonction du plaisir : targetPositions = fonction(hit.transform.gameObject.GetComponent<ChessPiece>().position)
-                    targetPositions = new Vector2[1];
+                    // Appeler la fonction du plaisir : 
+                    targetPositions = rules.PossibleMoves(hit.transform.gameObject.GetComponent<ChessPiece>()).ToArray();
                     TargetFactory.instance.SetTargets(targetPositions);
+                    GameManager.instance.currentSelectedPiece = hit.transform.gameObject.GetComponent<ChessPiece>();
                 }
                 
             }
