@@ -580,13 +580,12 @@ public class ChessRules : MonoBehaviour
                                     castle_possible = false;
                                 }
                             }
+                            if (castle_possible)
+                            {
+                                l.Add(new Vector2(2,0));
+                            }
                         }
-
-                        if (castle_possible)
-                        {
-                            l.Add(new Vector2(2,0));
-                        }
-
+                        
                         castle_possible = true;
                     }
                     if (!whiteKmoved && !whiteR2moved)
@@ -602,13 +601,12 @@ public class ChessRules : MonoBehaviour
                                     castle_possible = false;
                                 }
                             }
-                        }
+                            if (castle_possible)
+                            {
+                                l.Add(new Vector2(6,0));
+                            }
 
-                        if (castle_possible)
-                        {
-                            l.Add(new Vector2(6,0));
                         }
-
                         castle_possible = true;
                     }
                 }
@@ -629,13 +627,11 @@ public class ChessRules : MonoBehaviour
                                     castle_possible = false;
                                 }
                             }
+                            if (castle_possible)
+                            {
+                                l.Add(new Vector2(2,7));
+                            }
                         }
-
-                        if (castle_possible)
-                        {
-                            l.Add(new Vector2(2,7));
-                        }
-
                         castle_possible = true;
                     }
                     if (!blackKmoved && !blackR2moved)
@@ -651,13 +647,11 @@ public class ChessRules : MonoBehaviour
                                     castle_possible = false;
                                 }
                             }
+                            if (castle_possible)
+                            {
+                                l.Add(new Vector2(6,7));
+                            }
                         }
-
-                        if (castle_possible)
-                        {
-                            l.Add(new Vector2(6,7));
-                        }
-
                         castle_possible = true;
                     }
                 }
