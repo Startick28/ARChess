@@ -759,7 +759,8 @@ public class ChessRules : MonoBehaviour
 
     public int IsMate(GameManager.ChessPieces[][] board)
     {
-        int mate;
+        int mate = 0;
+        int mate2 = 0;
         GameManager.ChessPieces[][] board_t = new GameManager.ChessPieces[8][];
         for (int k = 0; k < 8; k++)
         {
@@ -792,15 +793,13 @@ public class ChessRules : MonoBehaviour
                             board_t[(int) l[k].x][(int) l[k].y] = piece.pieceType;
                             board_t[i][j] = GameManager.ChessPieces.Void;
 
-                            if (IsCheck(board_t) == 1)
-                            {
-                                mate = 1;
-                            }
-                            else
+                            if (IsCheck(board_t) != 1)
                             {
                                 mate = 0;
+                                board_t[(int) l[k].x][(int) l[k].y] = board[(int) l[k].x][(int) l[k].y];
+                                board_t[i][j] = piece.pieceType;
                             }
-
+                            
                             board_t[(int) l[k].x][(int) l[k].y] = board[(int) l[k].x][(int) l[k].y];
                             board_t[i][j] = piece.pieceType;
                         }
@@ -808,14 +807,13 @@ public class ChessRules : MonoBehaviour
                 }
                 else
                 {
-                    
-                    return mate;
+                    break;
                 }
             }
         }
 
         // Black mated
-        mate = 2;
+        mate2 = 2;
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
@@ -833,15 +831,11 @@ public class ChessRules : MonoBehaviour
                             board_t[(int) l[k].x][(int) l[k].y] = piece.pieceType;
                             board_t[i][j] = GameManager.ChessPieces.Void;
 
-                            if (IsCheck(board_t) == 2)
+                            if (IsCheck(board_t) != 2)
                             {
-                                mate = 2;
+                                mate2 = 0;
                             }
-                            else
-                            {
-                                mate = 0;
-                            }
-
+                            
                             board_t[(int) l[k].x][(int) l[k].y] = board[(int) l[k].x][(int) l[k].y];
                             board_t[i][j] = piece.pieceType;
                         }
@@ -854,7 +848,7 @@ public class ChessRules : MonoBehaviour
             }
         }
 
-        return mate;
+        return mate + mate2;
     }
 
 
